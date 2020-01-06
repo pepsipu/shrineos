@@ -1,4 +1,7 @@
 #include "raw_frequencies/mario.c"
+#include "raw_frequencies/axelf.c"
+#include "raw_frequencies/tetris.c"
+#include "raw_frequencies/russian_anthem.c"
 #include "beep_structure.c"
 
 struct {
@@ -11,7 +14,25 @@ struct {
         .frequencies = mario,
         .song_name = "mario",
         .porter = "pepsipu",
-        .song_length = sizeof(mario) / sizeof(struct beep),
+        .song_length = sizeof(mario) / sizeof(struct beep)
+    },
+    {
+        .frequencies = russia,
+        .song_name = "russian anthem",
+        .porter = "ararouge",
+        .song_length = sizeof(russia) / sizeof(struct beep)
+    },
+    {
+        .frequencies = axel,
+        .song_name = "axel f",
+        .porter = "ararouge",
+        .song_length = sizeof(russia) / sizeof(struct beep)
+    },
+    {
+        .frequencies = tetris,
+        .song_name = "tetris",
+        .porter = "ararouge",
+        .song_length = sizeof(tetris) / sizeof(struct beep)
     }
 };
 void play_song(int index) {
